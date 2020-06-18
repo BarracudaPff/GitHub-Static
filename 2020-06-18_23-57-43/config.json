@@ -1,0 +1,34 @@
+{
+  "projectPath": "/Users/kirill.krylov/IdeaProjects/code_golf_data",
+  "language": "Python",
+  "outputDir": "/Users/kirill.krylov/IdeaProjects/code_golf_data/completion-evaluation",
+  "actions": {
+    "evaluationRoots": [],
+    "strategy": {
+      "completeAllTokens": false,
+      "emulateUser": false,
+      "codeGolf": false,
+      "context": "ALL",
+      "prefix": {
+        "name": "NoPrefix"
+      },
+      "filters": {}
+    }
+  },
+  "interpret": {
+    "completionType": "BASIC",
+    "sessionsLimit": null,
+    "completeTokenProbability": 1.0,
+    "completeTokenSeed": null,
+    "emulationSettings": null,
+    "codeGolfSettings": null,
+    "saveLogs": false,
+    "saveFeatures": true,
+    "trainTestSplit": 70
+  },
+  "reports": {
+    "evaluationTitle": "COMPARE_MULTIPLE",
+    "sessionsFilters": [],
+    "comparisionFilters": []
+  }
+}
