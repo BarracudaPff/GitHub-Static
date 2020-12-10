@@ -58,4 +58,4 @@ def __unpack_archive(archive_path: str, dest_path: str):
 
 if __name__ == '__main__':
     args = arg_parser.parse_args()
-    __download_file(args.aws_filename", f"models/{args.aws_filename}", args.aws_id, args.aws_secret, args.aws_bucket)
+    __download_file(args.aws_filename, f"models/{args.aws_filename}", args.aws_id, args.aws_secret, args.aws_bucket)
