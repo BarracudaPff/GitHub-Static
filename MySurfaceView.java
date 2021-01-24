@@ -12,6 +12,7 @@ public class MySurfaceView extends SurfaceView implements View.OnTouchListener, 
     public MySurfaceView(Context context, AttributeSet attrs) {
         super(context, attrs);
         getHolder().addCallback(this);
+        setOnTouchListener(this);
     }
 
     @Override
