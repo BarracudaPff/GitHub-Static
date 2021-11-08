@@ -1,0 +1,41 @@
+{
+  "projectPath": "/opt/buildAgent/work/fda73abf326a35c4/evaluation-project",
+  "language": "Python",
+  "outputDir": "/opt/buildAgent/work/fda73abf326a35c4/evaluation-project/completion-evaluation",
+  "actions": {
+    "evaluationRoots": [],
+    "strategy": {
+      "emulateUser": false,
+      "codeGolf": false,
+      "context": "ALL",
+      "prefix": {
+        "name": "NoPrefix"
+      },
+      "filters": {}
+    }
+  },
+  "interpret": {
+    "completionType": "BASIC",
+    "experimentGroup": null,
+    "sessionsLimit": null,
+    "completeTokenProbability": 1.0,
+    "completeTokenSeed": null,
+    "emulationSettings": null,
+    "codeGolfSettings": null,
+    "saveLogs": false,
+    "saveFeatures": true,
+    "saveContent": false,
+    "logLocationAndItemText": false,
+    "trainTestSplit": 70
+  },
+  "reorder": {
+    "useReordering": false,
+    "title": "BASIC",
+    "features": []
+  },
+  "reports": {
+    "evaluationTitle": "COMPARE_MULTIPLE",
+    "sessionsFilters": [],
+    "comparisonFilters": []
+  }
+}

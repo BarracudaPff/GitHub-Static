@@ -1,0 +1,58 @@
+<html>
+  <head>
+    <title>Error on actions generation for file inception_v2.py (ALL and WITHOUT COMPARISON filters)</title>
+  </head>
+  <body>
+    <h1>Error on actions generation for file inception_v2.py (ALL and WITHOUT COMPARISON filters)</h1>
+    <h2>Message</h2>
+    <pre><code>Element: class com.jetbrains.python.psi.impl.PyFileImpl #Python  because: different providers: com.intellij.psi.SingleRootFileViewProvider{vFile=file:///opt/buildAgent/work/fda73abf326a35c4/evaluation-project/models/slim/nets/inception_v2.py, vFileId=373, content=VirtualFileContent{size=23750}, eventSystemEnabled=true}(7de15a78); com.intellij.psi.SingleRootFileViewProvider{vFile=file:///opt/buildAgent/work/fda73abf326a35c4/evaluation-project/models/slim/nets/inception_v2.py, vFileId=373, content=VirtualFileContent{size=23750}, eventSystemEnabled=true}(9f6fb68)
+invalidated at: see attachment [Plugin: PythonCore]</code></pre>
+    <h2>Stacktrace <button id="copyBtn">&#128203</button></h2>
+    <pre><code id="stackTrace">com.intellij.diagnostic.PluginException: Element: class com.jetbrains.python.psi.impl.PyFileImpl #Python  because: different providers: com.intellij.psi.SingleRootFileViewProvider{vFile=file:///opt/buildAgent/work/fda73abf326a35c4/evaluation-project/models/slim/nets/inception_v2.py, vFileId=373, content=VirtualFileContent{size=23750}, eventSystemEnabled=true}(7de15a78); com.intellij.psi.SingleRootFileViewProvider{vFile=file:///opt/buildAgent/work/fda73abf326a35c4/evaluation-project/models/slim/nets/inception_v2.py, vFileId=373, content=VirtualFileContent{size=23750}, eventSystemEnabled=true}(9f6fb68)
+invalidated at: see attachment [Plugin: PythonCore]
+	at com.intellij.ide.plugins.PluginManagerCore.createPluginException(PluginManagerCore.java:270)
+	at com.intellij.diagnostic.PluginProblemReporterImpl.createPluginExceptionByClass(PluginProblemReporterImpl.java:12)
+	at com.intellij.diagnostic.PluginException.createByClass(PluginException.java:92)
+	at com.intellij.psi.util.PsiUtilCore.ensureValid(PsiUtilCore.java:476)
+	at com.intellij.psi.impl.source.PsiFileImpl.getTextLength(PsiFileImpl.java:323)
+	at com.intellij.cce.visitor.CodeGolfEvaluationVisitor$DefaultImpls.initFile(CodeGolfEvaluationVisitor.kt:20)
+	at com.intellij.cce.visitor.PythonCodeGolfVisitor.initFile(PythonCodeGolfVisitor.kt:14)
+	at com.intellij.cce.visitor.PythonCodeGolfVisitor.visitPyFile(PythonCodeGolfVisitor.kt:22)
+	at com.jetbrains.python.psi.impl.PyFileImpl.accept(PyFileImpl.java:257)
+	at com.intellij.cce.visitor.CodeFragmentFromPsiBuilder$getFileTokens$1.run(CodeFragmentFromPsiBuilder.kt:56)
+	at com.intellij.openapi.project.DumbService.lambda$runReadActionInSmartMode$1(DumbService.java:157)
+	at com.intellij.openapi.application.impl.ApplicationImpl.runReadAction(ApplicationImpl.java:865)
+	at com.intellij.openapi.application.ReadAction.compute(ReadAction.java:61)
+	at com.intellij.openapi.project.DumbService.runReadActionInSmartMode(DumbService.java:150)
+	at com.intellij.cce.visitor.CodeFragmentFromPsiBuilder.getFileTokens(CodeFragmentFromPsiBuilder.kt:54)
+	at com.intellij.cce.visitor.CodeFragmentFromPsiBuilder.build(CodeFragmentFromPsiBuilder.kt:28)
+	at com.intellij.cce.evaluation.step.ActionsGenerationStep.generateActions(ActionsGenerationStep.kt:63)
+	at com.intellij.cce.evaluation.step.ActionsGenerationStep.runInBackground(ActionsGenerationStep.kt:34)
+	at com.intellij.cce.evaluation.step.BackgroundEvaluationStep$start$task$1.run(BackgroundEvaluationStep.kt:31)
+	at com.intellij.openapi.progress.impl.CoreProgressManager.startTask(CoreProgressManager.java:436)
+	at com.intellij.openapi.progress.impl.ProgressManagerImpl.startTask(ProgressManagerImpl.java:120)
+	at com.intellij.openapi.progress.impl.CoreProgressManager.lambda$runProcessWithProgressAsync$5(CoreProgressManager.java:496)
+	at com.intellij.openapi.progress.impl.ProgressRunner.lambda$submit$3(ProgressRunner.java:244)
+	at com.intellij.openapi.progress.impl.CoreProgressManager.lambda$runProcess$2(CoreProgressManager.java:188)
+	at com.intellij.openapi.progress.impl.CoreProgressManager.lambda$executeProcessUnderProgress$12(CoreProgressManager.java:624)
+	at com.intellij.openapi.progress.impl.CoreProgressManager.registerIndicatorAndRun(CoreProgressManager.java:698)
+	at com.intellij.openapi.progress.impl.CoreProgressManager.computeUnderProgress(CoreProgressManager.java:646)
+	at com.intellij.openapi.progress.impl.CoreProgressManager.executeProcessUnderProgress(CoreProgressManager.java:623)
+	at com.intellij.openapi.progress.impl.ProgressManagerImpl.executeProcessUnderProgress(ProgressManagerImpl.java:66)
+	at com.intellij.openapi.progress.impl.CoreProgressManager.runProcess(CoreProgressManager.java:175)
+	at com.intellij.openapi.progress.impl.ProgressRunner.lambda$submit$4(ProgressRunner.java:244)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1700)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.util.concurrent.Executors$PrivilegedThreadFactory$1$1.run(Executors.java:668)
+	at java.base/java.util.concurrent.Executors$PrivilegedThreadFactory$1$1.run(Executors.java:665)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/java.util.concurrent.Executors$PrivilegedThreadFactory$1.run(Executors.java:665)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: com.intellij.psi.PsiInvalidElementAccessException: Element: class com.jetbrains.python.psi.impl.PyFileImpl #Python  because: different providers: com.intellij.psi.SingleRootFileViewProvider{vFile=file:///opt/buildAgent/work/fda73abf326a35c4/evaluation-project/models/slim/nets/inception_v2.py, vFileId=373, content=VirtualFileContent{size=23750}, eventSystemEnabled=true}(7de15a78); com.intellij.psi.SingleRootFileViewProvider{vFile=file:///opt/buildAgent/work/fda73abf326a35c4/evaluation-project/models/slim/nets/inception_v2.py, vFileId=373, content=VirtualFileContent{size=23750}, eventSystemEnabled=true}(9f6fb68)
+invalidated at: see attachment
+	... 36 more
+</code></pre>
+    <script src="../res/error.js"></script>
+  </body>
+</html>
